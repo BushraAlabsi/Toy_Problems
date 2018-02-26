@@ -6,7 +6,13 @@
 //  nextItem("testing", "t") # "e"
 
 	function nextItem(items, elem){
-		//your code is here
+		for (var i = 0; i < items.length; i++) {
+			if(items[i] === elem){
+				if (items[i+1]){return items[i+1];}
+				else {return null;}
+			}
+		}
+		return null;
 	}
 
 //  We need a function that can transform a number into a string.
@@ -15,5 +21,5 @@
 // 	numberToString(999); // returns '999';`
 
 	function numberToString(num) {
-	  //your code is here
+	  return ""+num;
 	}
