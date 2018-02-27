@@ -5,5 +5,14 @@
 // accum("cwAt");    // "C-Ww-Aaa-Tttt"
 
     function accum(input){
-        //your code is here
+    	var result ="";
+        for (var i = 0; i < input.length; i++) {
+        	result +=input[i].toUpperCase();
+        	for (var j = 0; j < i; j++) {
+        		     	
+        		result +=input[i].toLowerCase();
+            }
+            if(i !== input.length-1) result+= "-";
+        }
+        return result;
     }
